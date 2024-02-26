@@ -10,7 +10,7 @@ gem "rails", github: "rails/rails", branch: "main"
 
 gem "puma"
 
-gem "sqlite3"
+gem "pg"
 
 gem "sprockets-rails"
 
