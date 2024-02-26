@@ -34,7 +34,7 @@ module AuditLogger
         auditable: self,
         context: audit_logger_context,
         whodunnit: AuditLogger.whodunnit,
-        audited_changes: saved_changed
+        audited_changes: saved_changes
       )
     end
   end

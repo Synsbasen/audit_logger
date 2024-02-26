@@ -11,8 +11,7 @@ module AuditLogger
     default_scope { includes(:whodunnit) }
 
     def audited_changes=(value)
-      ignored_attributes = %i[id created_at updated_at deleted_at]
-      value = value.except(*ignored_attributes)
+      value = value.except(*AuditLogger.config.ignored_attributes)
 
       super(value)
     end

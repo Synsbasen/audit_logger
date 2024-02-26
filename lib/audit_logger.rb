@@ -14,4 +14,15 @@ module AuditLogger
   def self.whodunnit
     Current.whodunnit
   end
+
+  def self.configure
+    @config ||= OpenStruct.new
+    yield @config if block_given?
+
+    @config
+  end
+
+  def self.config
+    @config || OpenStruct.new(ignored_attributes: [])
+  end
 end

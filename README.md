@@ -16,9 +16,17 @@ And then execute:
 $ bundle
 ```
 
-Or install it yourself as:
+Install and run the migrations:
 ```bash
-$ gem install audit_logger
+$ bundle exec rails audit_logger:install:migrations
+$ bundle exec rails db:migrate
+```
+
+Configure ignored attributes (if any) by creating an initializer (config/initializers/audit_logger.rb):
+```ruby
+AuditLogger.configure do |config|
+  config.ignored_attributes = %i[id created_at updated_at deleted_at some_other_attribute_to_ignore]
+end
 ```
 
 ## Contributing
