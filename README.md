@@ -1,8 +1,5 @@
 # AuditLogger
-Short description and motivation.
-
-## Usage
-How to use my plugin.
+AuditLogger is a super simple audit logger for Ruby on Rails applications. It logs changes to your models in a simple and easy to understand way."
 
 ## Installation
 Add this line to your application's Gemfile:
